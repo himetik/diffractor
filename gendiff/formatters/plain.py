@@ -6,8 +6,10 @@ from operator import itemgetter
 def stringify(val):
     """
     Stringify value of diff.
+
     Args:
         val: diff value
+
     Returns:
         str
     """
@@ -15,15 +17,19 @@ def stringify(val):
         return '[complex value]'
     if val in {'true', 'false', 'null'}:
         return val
-    return f"'{val}'"
+    if isinstance(val, str):
+        return f"'{val}'"
+    return val
 
 
 def get_plain_item(diff_item, ancestry):
     """
     Get diff item in plain format.
+
     Args:
         diff_item (dict): result of diff by one key
         ancestry: chain of ancestry keys in case of nested diff item
+
     Returns:
         str
     """
@@ -50,17 +56,21 @@ def get_plain_item(diff_item, ancestry):
 def plain(diff):
     """
     Format diff to plain format.
+
     Args:
         diff (list): diff of two dictionaries
+
     Returns:
         str
     """
     def iter(data, ancestry=None):
         """
         Format diff to plain format in iter process.
+
         Args:
             data (list): item of diff
             ancestry: chain of keys in nested diff
+
         Returns:
             str
         """
