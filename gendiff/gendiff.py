@@ -2,7 +2,7 @@
 
 import itertools
 
-from read_file import read_json
+from gendiff.read_file import read_json
 
 
 def get_value(dictionary, key):
