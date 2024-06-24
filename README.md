@@ -17,5 +17,11 @@ make install
 make build
 make package-install
 ```
+
 The example of installation
+
 [![asciicast](https://asciinema.org/a/665348.svg)](https://asciinema.org/a/665348)
+
+The example of uninstallation
+
+[![asciicast](https://asciinema.org/a/f4z7VwBmX9fft389ddqAk64zZ.svg)](https://asciinema.org/a/f4z7VwBmX9fft389ddqAk64zZ)
