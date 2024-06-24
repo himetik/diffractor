@@ -36,7 +36,7 @@ Stylish diff of two flat yaml files:
 
 Stylish diff of two nested files:
 
----
+[![asciicast](https://asciinema.org/a/665405.svg)](https://asciinema.org/a/665405)
 
 Plain diff of two files:
 
