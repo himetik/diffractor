@@ -25,3 +25,30 @@ The example of installation
 The example of uninstallation
 
 [![asciicast](https://asciinema.org/a/f4z7VwBmX9fft389ddqAk64zZ.svg)](https://asciinema.org/a/f4z7VwBmX9fft389ddqAk64zZ)
+
+Stylish diff of two flat json files:
+
+---
+
+Stylish diff of two flat yaml files:
+
+---
+
+Stylish diff of two nested files:
+
+---
+
+Plain diff of two files:
+
+[![asciicast](https://asciinema.org/a/JmlKzHPygYJGEgzpVPbGsuYrY.svg)](https://asciinema.org/a/JmlKzHPygYJGEgzpVPbGsuYrY)
+
+JSON diff of two files:
+
+[![asciicast](https://asciinema.org/a/665390.svg)](https://asciinema.org/a/665390)
+
+
+
+
+
+
+
