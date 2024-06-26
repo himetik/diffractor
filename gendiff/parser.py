@@ -48,17 +48,17 @@ def parse_file(file_path):
         '.yml': parse_yaml,
         '.yaml': parse_yaml,
     }
-    supported_extensions = parsers.keys()
 
     file_path_obj = pathlib.Path(file_path)
     file_abs_path = file_path_obj.resolve()
     file_extension = file_path_obj.suffix
 
-    if file_extension not in supported_extensions:
+    if file_extension in parsers:
+        with open(file_abs_path) as file_obj:
+            return parsers[file_extension](file_obj)
+    else:
         raise ValueError(
             f'Unsupported file type: "{file_extension}". '
-            f'Supported file types: {", ".join(supported_extensions)}'
+            f'Supported file types: {", ".join(parsers.keys())}'
         )
 
-    with open(file_abs_path) as file_obj:
-        return parsers[file_extension](file_obj)
