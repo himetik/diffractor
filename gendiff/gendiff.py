@@ -18,15 +18,6 @@ def format_diff(diff, formatter_type):
     Returns:
         str
     """
-
-    supported_formatter_types = {'stylish', 'plain', 'json'}
-
-    if formatter_type not in supported_formatter_types:
-        return (
-            'formatter_type parameter can only take the following values: '
-            f'plain, json, stylish. Current value is {formatter_type}'
-        )
-
     formatters = {
         'plain': plain,
         'json': json_format,
@@ -47,6 +38,13 @@ def generate_diff(file1_path, file2_path, formatter_type='stylish'):
     Returns:
         diff (str)
     """
+    supported_formatter_types = {'stylish', 'plain', 'json'}
+
+    if formatter_type not in supported_formatter_types:
+        return (
+            'formatter_type parameter can only take the following values: '
+            f'plain, json, stylish. Current value is {formatter_type}'
+        )
 
     try:
         dict1 = parse_file(file1_path)
