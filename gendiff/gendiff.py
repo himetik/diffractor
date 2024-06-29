@@ -24,7 +24,7 @@ def format_diff(diff, formatter_type):
         'stylish': stylish,
     }
     if formatter_type not in formatters:
-        return (
+        raise ValueError (
             'formatter_type parameter can only take the following values: '
             f'plain, json, stylish. Current value is {formatter_type}'
         )
@@ -49,8 +49,11 @@ def generate_diff(file1_path, file2_path, formatter_type='stylish'):
         dict1 = parse_file(file1_path)
         dict2 = parse_file(file2_path)
     except ValueError as err:
-        return str(err)
+        raise ValueError(f"Error parsing file(s): {str(err)}") from err
 
     diff = compare_dicts(dict1, dict2)
 
     return format_diff(diff, formatter_type)
+    
+    
+
