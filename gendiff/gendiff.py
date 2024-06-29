@@ -24,8 +24,8 @@ def format_diff(diff, formatter_type):
         'stylish': stylish,
     }
     if formatter_type not in formatters:
-        raise ValueError (
-            f'formatter_type parameter can only take the following values: \n'
+        raise ValueError(
+            f'formatter_type parameter can only take the following values: '
             f'plain, json, stylish. Current value is {formatter_type}'
         )
     return formatters[formatter_type](diff)
