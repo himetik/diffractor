@@ -49,7 +49,7 @@ def generate_diff(file1_path, file2_path, formatter_type='stylish'):
         dict1 = parse_file(file1_path)
         dict2 = parse_file(file2_path)
     except ValueError as err:
-        raise ValueError form err
+        return str(err)
 
     diff = compare_dicts(dict1, dict2)
 
