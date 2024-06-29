@@ -54,3 +54,4 @@ def generate_diff(file1_path, file2_path, formatter_type='stylish'):
     diff = compare_dicts(dict1, dict2)
 
     return format_diff(diff, formatter_type)
+    
