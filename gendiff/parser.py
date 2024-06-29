@@ -33,31 +33,46 @@ def parse_yaml(yaml_data):
     return yaml_load(yaml_data, Loader=Loader)
 
 
-def parse_file(file_path):
+def get_file_info(file_path):
     """
-    Parse json or yaml file.
+    Get absolute path and extension of the file.
 
     Args:
         file_path (str): file path
 
     Returns:
+        tuple: (absolute path, file extension)
+    """
+    file_path_obj = pathlib.Path(file_path)
+    file_abs_path = file_path_obj.resolve()
+    file_extension = file_path_obj.suffix
+    return file_abs_path, file_extension
+
+
+def parse_file(file_path):
+    """
+    Parse json or yaml file.
+
+    Args:
+
+        file_path (str): file path
+
+    Returns:
         dict
+
     """
     parsers = {
         '.json': parse_json,
         '.yml': parse_yaml,
         '.yaml': parse_yaml,
     }
-    supported_extensions = parsers.keys()
 
-    file_path_obj = pathlib.Path(file_path)
-    file_abs_path = file_path_obj.resolve()
-    file_extension = file_path_obj.suffix
+    file_abs_path, file_extension = get_file_info(file_path)
 
-    if file_extension not in supported_extensions:
+    if file_extension not in parsers:
         raise ValueError(
             f'Unsupported file type: "{file_extension}". '
-            f'Supported file types: {", ".join(supported_extensions)}'
+            f'Supported file types: {", ".join(parsers.keys())}'
         )
 
     with open(file_abs_path) as file_obj:
