@@ -75,7 +75,7 @@ def plain(diff):
             str
         """
 
-        changed_data = filter(lambda item: item['type'] != 'same', data)
+        changed_data = filter(lambda item: item['type'] != 'equal', data)
         result = []
         for element in changed_data:
             key, key_type = itemgetter('key', 'type')(element)
