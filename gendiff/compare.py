@@ -56,6 +56,6 @@ def compare_dicts(dict1, dict2):
                 'new-value': value2,
             })
         else:
-            diff.append({'key': key, 'type': 'same', 'value': value1})
+            diff.append({'key': key, 'type': 'equal', 'value': value1})
 
     return diff
