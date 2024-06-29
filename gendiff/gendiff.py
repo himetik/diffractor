@@ -33,13 +33,17 @@ def format_diff(diff, formatter_type):
 
 def generate_diff(file1_path, file2_path, formatter_type='stylish'):
     """
-
     Generate diff comparing two json, yaml files.
 
     Args:
+
         file1_path (str): path to first file
         file2_path (str): path to second file
         formatter_type (str): the format in which the diff will be formatted
+
+
+    Raises:
+        ValueError: If formatter_type is invalid.
 
 
     Returns:
@@ -49,7 +53,7 @@ def generate_diff(file1_path, file2_path, formatter_type='stylish'):
         dict1 = parse_file(file1_path)
         dict2 = parse_file(file2_path)
     except ValueError as err:
-        return str(err)
+        raise ValueError(str(err))
 
     diff = compare_dicts(dict1, dict2)
 
