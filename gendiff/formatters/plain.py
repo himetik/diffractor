@@ -2,9 +2,10 @@
 
 from operator import itemgetter
 
-def stringify_plain(val):
+
+def stringify(val):
     """
-    Stringify value of diff for plain format.
+    Stringify value of diff.
 
     Args:
         val: diff value
@@ -14,10 +15,8 @@ def stringify_plain(val):
     """
     if isinstance(val, dict):
         return '[complex value]'
-    if isinstance(val, bool):
-        return 'true' if val else 'false'
-    if val is None:
-        return 'null'
+    if val in {'true', 'false', 'null'}:
+        return val
     if isinstance(val, str):
         return f"'{val}'"
     return val
@@ -34,20 +33,23 @@ def get_plain_item(diff_item, ancestry):
     Returns:
         str
     """
+    if 'value' in diff_item:
+        new_value = stringify(diff_item['value'])
+
     key, key_type = itemgetter('key', 'type')(diff_item)
     new_ancestry = f'{ancestry}.{key}' if ancestry else key
     if key_type == 'added':
         return (
             f"Property '{new_ancestry}' "
-            f"was added with value: {stringify_plain(diff_item['value'])}"
+            f"was added with value: {new_value}"
         )
     elif key_type == 'removed':
         return f"Property '{new_ancestry}' was removed"
     elif key_type == 'changed':
         return (
             f"Property '{new_ancestry}' was updated. "
-            f"From {stringify_plain(diff_item['old_value'])} "
-            f"to {stringify_plain(diff_item['new_value'])}"
+            f"From {stringify(diff_item['old-value'])} "
+            f"to {stringify(diff_item['new-value'])}"
         )
 
 
@@ -73,7 +75,7 @@ def plain(diff):
             str
         """
 
-        changed_data = filter(lambda item: item['type'] != 'same', data)
+        changed_data = filter(lambda item: item['type'] != 'equal', data)
         result = []
         for element in changed_data:
             key, key_type = itemgetter('key', 'type')(element)

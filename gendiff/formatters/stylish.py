@@ -6,7 +6,8 @@ from operator import itemgetter
 depth_space_count = 4
 replacer = ' '
 
-def stringify_stylish(data, depth):
+
+def stringify(data, depth):
     """
     Stringify data from different types.
 
@@ -30,10 +31,6 @@ def stringify_stylish(data, depth):
             string
         """
         if not isinstance(current_data, dict):
-            if isinstance(current_data, bool):
-                return 'true' if current_data else 'false'
-            if current_data is None:
-                return 'null'
             return str(current_data)
 
         deep_indent_size = iter_depth + depth_space_count
@@ -65,7 +62,7 @@ def stylish_item(key, key_type, value, depth, is_stringified=False):
     indents = {
         'added': '  + ',
         'removed': '  - ',
-        'same': '    ',
+        'equal': '    ',
     }
     legacy_indent = replacer * depth * depth_space_count
     new_depth = (depth + 1) * depth_space_count
@@ -74,7 +71,10 @@ def stylish_item(key, key_type, value, depth, is_stringified=False):
     if is_stringified:
         stringified_val = value
     else:
-        stringified_val = stringify_stylish(value, new_depth)
+        stringified_val = stringify(
+            value,
+            new_depth,
+        )
     return f'{legacy_indent}{indent}{key}: {stringified_val}'
 
 
@@ -102,27 +102,27 @@ def stylish(diff):
         lines = []
         for item in data:
             key, key_type = itemgetter('key', 'type')(item)
-            if key_type in {'added', 'removed', 'same'}:
+            if key_type in {'added', 'removed', 'equal'}:
                 lines.append(
-                    stylish_item(key, key_type, item.get('value', None), depth)
+                    stylish_item(key, key_type, item['value'], depth)
                 )
             elif key_type == 'changed':
                 old_value = stylish_item(
                     key,
                     'removed',
-                    item['old_value'],
+                    item['old-value'],
                     depth
                 )
-                new_value = stylish_item(key, 'added', item['new_value'], depth)
+                new_value = stylish_item(key, 'added', item['new-value'], depth)
                 lines.append(f'{old_value}\n{new_value}')
             elif key_type == 'complex':
                 stringified_val = iter_(item["children"], depth + 1)
                 lines.append(
-                    stylish_item(key, 'same', stringified_val, depth, True)
+                    stylish_item(key, 'equal', stringified_val, depth, True)
                 )
 
-        spaces_before_bracket = replacer * depth * depth_space_count
-        result = itertools.chain('{', lines, [spaces_before_bracket + '}'])
+        spaces_befor_bracket = replacer * depth * depth_space_count
+        result = itertools.chain('{', lines, [spaces_befor_bracket + '}'])
 
         return '\n'.join(result)
 
