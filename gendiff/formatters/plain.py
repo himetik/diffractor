@@ -15,11 +15,13 @@ def stringify(val):
     """
     if isinstance(val, dict):
         return '[complex value]'
-    if val in {'true', 'false', 'null'}:
-        return val
+    if isinstance(val, bool):
+        return 'true' if val else 'false'
+    if val is None:
+        return 'null'
     if isinstance(val, str):
         return f"'{val}'"
-    return val
+    return str(val)
 
 
 def get_plain_item(diff_item, ancestry):
@@ -74,8 +76,7 @@ def plain(diff):
         Returns:
             str
         """
-
-        changed_data = filter(lambda item: item['type'] != 'equal', data)
+        changed_data = filter(lambda item: item['type'] != 'same', data)
         result = []
         for element in changed_data:
             key, key_type = itemgetter('key', 'type')(element)

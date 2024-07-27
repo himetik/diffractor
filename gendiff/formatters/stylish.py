@@ -18,7 +18,6 @@ def stringify(data, depth):
     Returns:
         string
     """
-
     def iter_(current_data, iter_depth):
         """
         Stringify data in iter process.
@@ -62,7 +61,7 @@ def stylish_item(key, key_type, value, depth, is_stringified=False):
     indents = {
         'added': '  + ',
         'removed': '  - ',
-        'equal': '    ',
+        'same': '    ',
     }
     legacy_indent = replacer * depth * depth_space_count
     new_depth = (depth + 1) * depth_space_count
@@ -76,7 +75,6 @@ def stylish_item(key, key_type, value, depth, is_stringified=False):
             new_depth,
         )
     return f'{legacy_indent}{indent}{key}: {stringified_val}'
-
 
 def stylish(diff):
     """
@@ -102,7 +100,7 @@ def stylish(diff):
         lines = []
         for item in data:
             key, key_type = itemgetter('key', 'type')(item)
-            if key_type in {'added', 'removed', 'equal'}:
+            if key_type in {'added', 'removed', 'same'}:
                 lines.append(
                     stylish_item(key, key_type, item['value'], depth)
                 )
@@ -118,7 +116,7 @@ def stylish(diff):
             elif key_type == 'complex':
                 stringified_val = iter_(item["children"], depth + 1)
                 lines.append(
-                    stylish_item(key, 'equal', stringified_val, depth, True)
+                    stylish_item(key, 'same', stringified_val, depth, True)
                 )
 
         spaces_befor_bracket = replacer * depth * depth_space_count
