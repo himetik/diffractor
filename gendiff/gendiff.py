@@ -23,17 +23,11 @@ def format_diff(diff, formatter_type):
         'json': json_format,
         'stylish': stylish,
     }
-    if formatter_type not in formatters:
-        raise ValueError(
-            f'formatter_type parameter can only take the following values: '
-            f'plain, json, stylish. Current value is {formatter_type}'
-        )
     return formatters[formatter_type](diff)
 
 
 def generate_diff(file1_path, file2_path, formatter_type='stylish'):
     """
-
     Generate diff comparing two json, yaml files.
 
     Args:
@@ -41,15 +35,22 @@ def generate_diff(file1_path, file2_path, formatter_type='stylish'):
         file2_path (str): path to second file
         formatter_type (str): the format in which the diff will be formatted
 
-
     Returns:
         diff (str)
     """
+    supported_formatter_types = {'stylish', 'plain', 'json'}
+
+    if formatter_type not in supported_formatter_types:
+        return (
+            'formatter_type parameter can only take the following values: '
+            f'plain, json, stylish. Current value is {formatter_type}'
+        )
+
     try:
         dict1 = parse_file(file1_path)
         dict2 = parse_file(file2_path)
     except ValueError as err:
-        raise ValueError(str(err))
+        return str(err)
 
     diff = compare_dicts(dict1, dict2)
 

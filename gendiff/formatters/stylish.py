@@ -18,6 +18,7 @@ def stringify(data, depth):
     Returns:
         string
     """
+
     def iter_(current_data, iter_depth):
         """
         Stringify data in iter process.
@@ -75,6 +76,7 @@ def stylish_item(key, key_type, value, depth, is_stringified=False):
             new_depth,
         )
     return f'{legacy_indent}{indent}{key}: {stringified_val}'
+
 
 def stylish(diff):
     """
