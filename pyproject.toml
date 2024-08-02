@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = "A diff generator is a software tool that identifies and highlights the discrepancies or variations between two sets of data or files, helping users compare and analyze them efficiently."
-authors = ["George <solidpostbox@gmail.com>"]
+description = ""
+authors = ["himetik <solidpostbox@gmail.com>"]
 readme = "README.md"
 packages = [{include = "gendiff"}]
 
