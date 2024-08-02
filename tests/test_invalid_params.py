@@ -30,4 +30,3 @@ def test_generate_diff_unssupported_file_type():
     )
     diff = generate_diff(file1_bat, file1_bat)
     assert diff == expected
-
