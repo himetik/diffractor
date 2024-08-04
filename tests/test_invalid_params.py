@@ -24,10 +24,11 @@ def test_generate_diff_unssupported_formatter_type():
 
 
 def test_generate_diff_unssupported_file_type():
-    """Test generate_diff function with unssupported file type."""
+    """Test generate_diff function with unsupported file type."""
     expected = (
-        'Unsupported file type: ".bat". '
+        'Error parsing files: Unsupported file type: ".bat". '
         'Supported file types: .json, .yml, .yaml'
     )
     diff = generate_diff(file1_bat, file1_bat)
     assert diff == expected
+
