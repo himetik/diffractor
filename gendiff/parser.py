@@ -33,6 +33,13 @@ def parse_yaml(yaml_data):
     return yaml_load(yaml_data, Loader=Loader)
 
 
+def get_file_info(file_path):
+    file_path_obj = pathlib.Path(file_path)
+    file_abs_path = file_path_obj.resolve()
+    file_extension = file_path_obj.suffix
+    return file_abs_path, file_extension
+
+
 def parse_file(file_path):
     """
     Parse json or yaml file.
@@ -49,9 +56,7 @@ def parse_file(file_path):
         '.yaml': parse_yaml,
     }
 
-    file_path_obj = pathlib.Path(file_path)
-    file_abs_path = file_path_obj.resolve()
-    file_extension = file_path_obj.suffix
+    file_abs_path, file_extension = get_file_info(file_path)
 
     if file_extension not in parsers.keys():
         raise ValueError(
