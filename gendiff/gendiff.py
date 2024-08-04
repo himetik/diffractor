@@ -26,7 +26,7 @@ def format_diff(diff, formatter_type):
     supported_formatter_types = set(formatters.keys())
 
     if formatter_type not in supported_formatter_types:
-        return (
+        raise ValueError(
             'formatter_type parameter can only take the following values: '
             f'plain, json, stylish. Current value is {formatter_type}'
         )

@@ -1,6 +1,7 @@
 from pathlib import Path
 
 from gendiff.gendiff import generate_diff
+import pytest
 
 FIXT_PATH = Path('tests/fixtures/input')
 
@@ -17,9 +18,9 @@ def test_generate_diff_unssupported_formatter_type():
         'formatter_type parameter can only take the following values: '
         f'plain, json, stylish. Current value is {formatter_type}'
     )
-    diff = generate_diff(flat1_json, flat2_json, formatter_type)
-
-    assert diff == expected
+    with pytest.raises(ValueError) as excinfo:
+        generate_diff(flat1_json, flat2_json, formatter_type)
+    assert str(excinfo.value) == expected
 
 
 def test_generate_diff_unssupported_file_type():
