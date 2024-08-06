@@ -62,7 +62,7 @@ def stylish_item(key, key_type, value, depth, is_stringified=False):
     indents = {
         'added': '  + ',
         'removed': '  - ',
-        'same': '    ',
+        'equal': '    ',
     }
     legacy_indent = replacer * depth * depth_space_count
     new_depth = (depth + 1) * depth_space_count
@@ -102,7 +102,7 @@ def stylish(diff):
         lines = []
         for item in data:
             key, key_type = itemgetter('key', 'type')(item)
-            if key_type in {'added', 'removed', 'same'}:
+            if key_type in {'added', 'removed', 'equal'}:
                 lines.append(
                     stylish_item(key, key_type, item['value'], depth)
                 )
@@ -118,7 +118,7 @@ def stylish(diff):
             elif key_type == 'complex':
                 stringified_val = iter_(item["children"], depth + 1)
                 lines.append(
-                    stylish_item(key, 'same', stringified_val, depth, True)
+                    stylish_item(key, 'equal', stringified_val, depth, True)
                 )
 
         spaces_befor_bracket = replacer * depth * depth_space_count
