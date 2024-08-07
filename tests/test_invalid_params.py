@@ -31,3 +31,16 @@ def test_generate_diff_unssupported_file_type():
     )
     diff = generate_diff(file1_bat, file1_bat)
     assert diff == expected
+
+
+@pytest.mark.parametrize(
+    'file1, file2, expected_error',
+    [
+        (file1_bat, file2_bat, 'Error parsing files: Unsupported file type: ".bat". Supported file types: .json, .yml, .yaml'),
+        # Можно добавить другие примеры
+    ]
+)
+def test_generate_diff_unsupported_file_types(file1, file2, expected_error):
+    """Test generate_diff function with unsupported file types."""
+    diff = generate_diff(file1, file2, 'json')
+    assert diff == expected_error
