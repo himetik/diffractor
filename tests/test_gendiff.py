@@ -28,23 +28,6 @@ def read_file(file_path):
 @pytest.mark.parametrize(
     'diff,file1,file2',
     [
-        ('flat_diff.txt', 'flat1.json', 'flat2.json'),
-        ('flat_diff.txt', 'flat1.yaml', 'flat2.yaml'),
-        ('nested_diff.txt', 'nested1.json', 'nested2.json'),
-        ('nested_diff.txt', 'nested1.yml', 'nested2.yml'),
-    ],
-)
-def test_generate_diff_stylish(diff, file1, file2):
-    """Test generate_diff function with stylish output."""
-    assert generate_diff(
-        input_data[file1],
-        input_data[file2],
-    ) == read_file(output_data[diff])
-
-
-@pytest.mark.parametrize(
-    'diff,file1,file2',
-    [
         ('plain_diff.txt', 'nested1.json', 'nested2.json'),
         ('plain_diff.txt', 'nested1.yml', 'nested2.yml'),
     ],
@@ -71,4 +54,21 @@ def test_generate_diff_json(diff, file1, file2):
         input_data[file1],
         input_data[file2],
         'json',
+    ) == read_file(output_data[diff])
+
+
+@pytest.mark.parametrize(
+    'diff,file1,file2',
+    [
+        ('flat_diff.txt', 'flat1.json', 'flat2.json'),
+        ('flat_diff.txt', 'flat1.yaml', 'flat2.yaml'),
+        ('nested_diff.txt', 'nested1.json', 'nested2.json'),
+        ('nested_diff.txt', 'nested1.yml', 'nested2.yml'),
+    ],
+)
+def test_generate_diff_stylish(diff, file1, file2):
+    """Test generate_diff function with stylish output."""
+    assert generate_diff(
+        input_data[file1],
+        input_data[file2],
     ) == read_file(output_data[diff])

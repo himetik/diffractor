@@ -1,28 +1,6 @@
 """Compare two dicts."""
 
 
-def get_dict_value(dictionary, key):
-    """
-    Get value from dictionary by key.
-
-    Args:
-        dictionary (dict): json.read result
-        key: dict key
-
-    Returns:
-        dict value by key
-    """
-    if key not in dictionary:
-        return None
-
-    dict_val = dictionary[key]
-    if isinstance(dict_val, bool):
-        return str(dict_val).lower()
-    if dict_val is None:
-        return 'null'
-    return dict_val
-
-
 def compare_dicts(dict1, dict2):
     """
     Compare two dicts.
@@ -38,8 +16,8 @@ def compare_dicts(dict1, dict2):
 
     diff = []
     for key in sorted(keys):
-        value1 = get_dict_value(dict1, key)
-        value2 = get_dict_value(dict2, key)
+        value1 = dict1.get(key, None)
+        value2 = dict2.get(key, None)
 
         if key not in dict1:
             diff.append({'key': key, 'type': 'added', 'value': value2})

@@ -15,11 +15,15 @@ def stringify(val):
     """
     if isinstance(val, dict):
         return '[complex value]'
-    if val in {'true', 'false', 'null'}:
-        return val
+    if val is True:
+        return 'true'
+    if val is False:
+        return 'false'
+    if val is None:
+        return 'null'
     if isinstance(val, str):
         return f"'{val}'"
-    return val
+    return str(val)
 
 
 def get_plain_item(diff_item, ancestry):

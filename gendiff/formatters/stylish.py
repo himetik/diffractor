@@ -30,17 +30,30 @@ def stringify(data, depth):
         Returns:
             string
         """
-        if not isinstance(current_data, dict):
+        if isinstance(current_data, dict):
+            deep_indent_size = iter_depth + depth_space_count
+            deep_indent = replacer * deep_indent_size
+            current_indent = replacer * iter_depth
+            lines = []
+            for key, val in current_data.items():
+                # Break the long line into multiple lines for better readability
+                formatted_line = (
+                    f'{deep_indent}{key}: '
+                    f'{iter_(val, deep_indent_size)}'
+                )
+                lines.append(formatted_line)
+            result_data = itertools.chain(
+                '{',
+                lines,
+                [current_indent + '}']
+            )
+            return '\n'.join(result_data)
+        elif isinstance(current_data, bool):
+            return 'true' if current_data else 'false'
+        elif current_data is None:
+            return 'null'
+        else:
             return str(current_data)
-
-        deep_indent_size = iter_depth + depth_space_count
-        deep_indent = replacer * deep_indent_size
-        current_indent = replacer * iter_depth
-        lines = []
-        for key, val in current_data.items():
-            lines.append(f'{deep_indent}{key}: {iter_(val, deep_indent_size)}')
-        result_data = itertools.chain('{', lines, [current_indent + '}'])
-        return '\n'.join(result_data)
 
     return iter_(data, depth)
 
