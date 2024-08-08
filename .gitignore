@@ -1,9 +1,53 @@
-*.egg-info
-__pycache__
-dist/
+# Bytecode
 *.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environment
 .venv/
+env/
+venv/
+
+# Distribution / Packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Testing
 .coverage
 coverage.xml
 .pytest_cache/
+
+# IDE / Editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Code quality tools
 .codeclimate.yml
+*.eslintignore
+*.eslintrc
+*.stylelintignore
+*.stylelintrc
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Python environments
+Pipfile.lock
+poetry.lock
+
+# OS-specific files
+.DS_Store  # macOS
+Thumbs.db  # Windows
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.*.local
+
