@@ -97,4 +97,4 @@ gebdiff -f json first.json first.yaml
 ### Additional information
 
 - 📨 **Contact**: 
-- [LinkedIn](https://www.linkedin.com/in/george-igolkin-120247231/) ![LinkedIn](https://img.shields.io/badge/LinkedIn-himetik-green)
+  - [LinkedIn](https://www.linkedin.com/in/george-igolkin-120247231/) ![LinkedIn](https://img.shields.io/badge/LinkedIn-himetik-green)
