@@ -1,16 +1,18 @@
-# 🌅 Command-Line File Comparison Tool
+## 🌅 Command-Line File Comparison Tool
 
 [![Actions Status](https://github.com/himetik/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/himetik/python-project-50/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/408d27b88775611bdfc5/maintainability)](https://codeclimate.com/github/himetik/python-project-50/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/408d27b88775611bdfc5/test_coverage)](https://codeclimate.com/github/himetik/python-project-50/test_coverage)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-himetik-%2321A366)](https://www.linkedin.com/in/george-igolkin-120247231/)
 
-> 'gendiff' can make a difference!
-
 <br/>
 
-*'gendiff' is a command-line application that compares two files and generates the difference between them. 
-The application supports files in JSON and YAML formats and provides three output formats for displaying the differences: stylish, plain, and json.*
+### 🗞️ Description
+
+'gendiff' can make a difference!
+
+It's a command-line application that compares two files and generates the difference between them. 
+The application supports files in <span style="color:red">JSON</span> and <span style="color:blue">YAML</span> formats and provides three output formats for displaying the differences: stylish, plain, and json.
 
 <br/>
 
@@ -18,12 +20,12 @@ The application supports files in JSON and YAML formats and provides three outpu
 
  - File Comparison: Compares two files and identifies the differences between them.
 
- - Supported Formats: Works with files in JSON and YAML (YML) formats.
+ - Supported Formats: Works with files in JSON and <span style="color:blue">YAML</span> (YML) formats.
 
  - Output Formats: Displays the differences in three different formats:
    - Stylish: A nested format that shows the differences in a hierarchical structure.
    - Plain: A plain text format that shows the differences in a straightforward, linear way.
-   - JSON: A JSON format that outputs the differences as a JSON object.
+   - <span style="color:red">JSON</span>: A format that outputs the differences as a JSON object.
  
 <br/>
 
@@ -71,7 +73,7 @@ gendiff -f plain first.json second.json
 ```
 
 - **JSON Format**: 
-  Outputs the differences in JSON.
+  Outputs the differences in <span style="color:red">JSON</span>.
 
 ```bash
 gebdiff -f json first.json first.yaml
@@ -115,3 +117,5 @@ For development and testing, the following packages are used:
 <small>**isort**: `^5.11.4`</small><br>
 
 <br/>
+
+Icons used in this project are provided by ![Icons8](https://img.shields.io/badge/Icons8-Used-green?logo=icons8&logoColor=white) [Icons8](https://icons8.com/icons).
