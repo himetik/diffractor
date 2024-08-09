@@ -76,20 +76,20 @@ gebdiff -f json first.json first.yaml
 
 # Tools and Technologies Used
 
-- **Git**: ![Git]()  
+- **Git**: ![Git](images/git.png)  
   A distributed version control system for managing source code changes.
 
 - **Bash**: ![Bash](images/bash.png)  
   A Unix shell and command language used for scripting and automation.
 
-- **Python**: ![Python]()  
+- **Python**: ![Python](images/python3.png)  
   A high-level programming language known for its simplicity and readability.
 
-- **VSCode**: ![VSCode]()  
+- **VSCode**: ![VSCode](images/code.png)  
   A source-code editor with support for debugging, syntax highlighting, and more.
 
-- **Poetry**: ![Poetry]()  
+- **Poetry**: ![Poetry](images/poetry.svg)  
   A dependency management and packaging tool for Python projects.
 
-- **pytest**: ![pytest]()  
+- **pytest**: ![pytest](images/pytest.png)  
   A framework for writing simple and scalable test cases in Python.
