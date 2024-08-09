@@ -66,11 +66,11 @@ make run
 - **Stylish Format**: 
   Displays the differences in a human-readable format.
 
-  ![Compare 2 JSON files.](/images/stylish.gif)
-
 ```bash
 gendiff -f stylish first.yaml second.yml
 ```
+
+  ![Compare 2 JSON files.](/images/stylish.gif)
 
 - **Plain Format**: 
   Shows the differences in a plain text format.
