@@ -79,6 +79,8 @@ gendiff -f stylish first.yaml second.yml
 gendiff -f plain first.json second.json
 ```
 
+  ![Compare 2 JSON files.](/images/flat_jsons.gif)
+
 - **JSON Format**: 
   Outputs the differences in <span style="color:red">JSON</span>.
 
