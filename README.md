@@ -9,13 +9,15 @@
 
 <br/>
 
-`gendiff` is a command-line application that compares two files and generates the difference between them. 
+'gendiff' is a command-line application that compares two files and generates the difference between them. 
 The application supports files in JSON and YAML formats and provides three output formats for displaying the differences: stylish, plain, and json.
 
 ### ⚙️ Features
 
  - File Comparison: Compares two files and identifies the differences between them.
+
  - Supported Formats: Works with files in JSON and YAML (YML) formats.
+
  - Output Formats: Displays the differences in three different formats:
    - Stylish: A nested format that shows the differences in a hierarchical structure.
    - Plain: A plain text format that shows the differences in a straightforward, linear way.
@@ -93,7 +95,7 @@ The project utilizes a variety of tools and technologies to enhance development 
 
 <br/>
 
-### Project Version and Dependencies
+### 🐦‍⬛ Project Version and Dependencies
 
 <small>**Project version**: `0.1.0`</small><br>
 
