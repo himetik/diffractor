@@ -95,7 +95,7 @@ The project utilizes a variety of tools and technologies to enhance development 
 
 <br/>
 
-### 🐦‍⬛ Project Version and Dependencies
+### 🐦‍ Project Version and Dependencies
 
 <small>**Project version**: `0.1.0`</small><br>
 
