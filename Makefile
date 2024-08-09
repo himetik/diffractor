@@ -43,6 +43,11 @@ release-checklist: # Run all necessary checks and tasks before a release.
 	make lint
 	make build
 
+run: # Executes all stages: installation, build, and packaging with installation
+	make install
+	make build
+	make package-install
+
 # Installation of a package
 package-install: # Install the built package from the dist directory using pip.
 	python3 -m pip install dist/*.whl
