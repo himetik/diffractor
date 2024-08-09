@@ -4,6 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/408d27b88775611bdfc5/maintainability)](https://codeclimate.com/github/himetik/python-project-50/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/408d27b88775611bdfc5/test_coverage)](https://codeclimate.com/github/himetik/python-project-50/test_coverage)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-himetik-%2321A366)](https://www.linkedin.com/in/george-igolkin-120247231/)
+[![Icons8](https://img.shields.io/badge/Icons8-Used-green?logo=icons8&logoColor=white)](https://icons8.com/icons)
 
 <br/>
 
@@ -117,5 +118,3 @@ For development and testing, the following packages are used:
 <small>**isort**: `^5.11.4`</small><br>
 
 <br/>
-
-Icons used in this project are provided by ![Icons8](https://img.shields.io/badge/Icons8-Used-green?logo=icons8&logoColor=white) [Icons8](https://icons8.com/icons).
