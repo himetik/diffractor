@@ -88,8 +88,8 @@ gebdiff -f json first.json first.yaml
 - **VSCode**: ![VSCode](images/code.png)  
   A source-code editor with support for debugging, syntax highlighting, and more.
 
-- **Poetry**: ![Poetry](images/poetry.svg)  
+- **Poetry**: ![Poetry]()  
   A dependency management and packaging tool for Python projects.
 
-- **pytest**: ![pytest](images/pytest.png)  
+- **pytest**: ![pytest]()  
   A framework for writing simple and scalable test cases in Python.
