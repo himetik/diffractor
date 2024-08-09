@@ -3,6 +3,7 @@
 [![Actions Status](https://github.com/himetik/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/himetik/python-project-50/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/408d27b88775611bdfc5/maintainability)](https://codeclimate.com/github/himetik/python-project-50/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/408d27b88775611bdfc5/test_coverage)](https://codeclimate.com/github/himetik/python-project-50/test_coverage)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-himetik-%2321A366)](https://www.linkedin.com/in/george-igolkin-120247231/)
 
 > 'gendiff' can make a difference!
 
@@ -94,7 +95,4 @@ gebdiff -f json first.json first.yaml
 - 🧪 **pytest**:
   A framework for writing simple and scalable test cases in Python.
 
-### Additional information
-
-- 📨 **Contact**: 
-  -[![LinkedIn](https://img.shields.io/badge/LinkedIn-himetik-%2321A366)](https://www.linkedin.com/in/george-igolkin-120247231/)
+<br/>
