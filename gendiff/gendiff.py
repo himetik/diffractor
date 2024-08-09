@@ -57,11 +57,9 @@ def generate_diff(file1_path, file2_path, formatter_type='stylish'):
         # Parse the second file and convert its contents to a dictionary
         dict2 = parse_file(file2_path)
     except ValueError as err:
-        # Handle parsing errors and return an appropriate message
-        return f'Error parsing files: {err}'
+        raise err
     except Exception as err:
-        # Handle any other unexpected errors and return an appropriate message
-        return f'Unexpected error: {err}'
+        raise err
 
     # Compare the two dictionaries to get the differences
     diff = compare_dicts(dict1, dict2)
