@@ -10,10 +10,10 @@
 
 ### 🗞️ Description
 
-'gendiff' can make a difference!
+> 'gendiff' can make a difference!
 
 It's a command-line application that compares two files and generates the difference between them. 
-The application supports files in <span style="color:red">JSON</span> and <span style="color:blue">YAML</span> formats and provides three output formats for displaying the differences: stylish, plain, and json.
+The application supports files in JSON and YAML formats and provides three output formats for displaying the differences: stylish, plain, and json.
 
 <br/>
 
@@ -21,12 +21,12 @@ The application supports files in <span style="color:red">JSON</span> and <span 
 
  - File Comparison: Compares two files and identifies the differences between them.
 
- - Supported Formats: Works with files in JSON and <span style="color:blue">YAML</span> (YML) formats.
+ - Supported Formats: Works with files in JSON and YAML(YML) formats.
 
  - Output Formats: Displays the differences in three different formats:
    - Stylish: A nested format that shows the differences in a hierarchical structure.
    - Plain: A plain text format that shows the differences in a straightforward, linear way.
-   - <span style="color:red">JSON</span>: A format that outputs the differences as a JSON object.
+   - JSON: A format that outputs the differences as a JSON object.
  
 <br/>
 
@@ -59,6 +59,8 @@ make run
 
 ### 🕹️ Use 'gendiff' to Compare Two JSON/YAML Files
 
+> By default, the files are compared in the "stylish" format
+
 #### Flat comparison:
 
 ```bash
@@ -86,7 +88,7 @@ gendiff -f plain first.json second.json
   ![Compare 2 JSON files.](/images/plain.gif)
 
 #### JSON Format: 
-  Outputs the differences in <span style="color:red">JSON</span>.
+  Outputs the differences in JSON.
 
 ```bash
 gebdiff -f json first.json first.yaml
@@ -98,7 +100,7 @@ gebdiff -f json first.json first.yaml
 
 ### 🛠️ Tools and Technologies Used
 
-The project utilizes a variety of tools and technologies to enhance development and maintain code quality:
+> The project utilizes a variety of tools and technologies to enhance development and maintain code quality:
 
 <img src="images/git.png" width="25" height="25" alt="Git"> **Git** is a distributed version control system used for managing source code changes and collaboration. 
 
@@ -111,6 +113,8 @@ The project utilizes a variety of tools and technologies to enhance development 
 🔩 **Poetry** is used as a dependency management and packaging tool specifically designed for Python projects, facilitating easy management of project dependencies and packaging.
 
 🧪 **pytest** is the testing framework adopted for writing simple and scalable test cases in Python, ensuring code reliability and correctness through comprehensive testing.
+
+🎥 **asciinema** is a tool used for recording and sharing terminal sessions, enabling you to capture and replay terminal interactions.
 
 <br/>
 
