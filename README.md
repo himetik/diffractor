@@ -59,7 +59,11 @@ make run
 
 ### 🕹️ Use 'gendiff' to Compare Two JSON/YAML Files
 
-- **Flat comparison**
+- **Flat comparison**:
+
+```bash
+gendiff -f first_flat.json second_flat.json
+```
 
   ![Compare 2 JSON files.](/images/flat_jsons.gif)
 
@@ -79,7 +83,7 @@ gendiff -f stylish first.yaml second.yml
 gendiff -f plain first.json second.json
 ```
 
-  ![Compare 2 JSON files.](/images/flat_jsons.gif)
+  ![Compare 2 JSON files.](/images/plain.gif)
 
 - **JSON Format**: 
   Outputs the differences in <span style="color:red">JSON</span>.
