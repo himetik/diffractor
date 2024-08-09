@@ -1,17 +1,17 @@
-# "gendiff" CLI Application
+# 🌅 Command-Line File Comparison Tool
 
 [![Actions Status](https://github.com/himetik/python-project-50/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/himetik/python-project-50/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/408d27b88775611bdfc5/maintainability)](https://codeclimate.com/github/himetik/python-project-50/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/408d27b88775611bdfc5/test_coverage)](https://codeclimate.com/github/himetik/python-project-50/test_coverage)
 
-> "gendiff" can make a difference!
+> 'gendiff' can make a difference!
 
 <br/>
 
-GenDiff is a command-line application that compares two files and generates the difference between them. 
+`gendiff` is a command-line application that compares two files and generates the difference between them. 
 The application supports files in JSON and YAML formats and provides three output formats for displaying the differences: stylish, plain, and json.
 
-#### Features
+### ⚙️ Features
 
  - File Comparison: Compares two files and identifies the differences between them.
  - Supported Formats: Works with files in JSON and YAML (YML) formats.
@@ -22,7 +22,7 @@ The application supports files in JSON and YAML formats and provides three outpu
  
 <br/>
 
-## Installation
+### 🔌 Installation
 
 > It is recommended to use a virtual environment
 
@@ -49,7 +49,7 @@ make run
 
 <br/>
 
-# Use "gendiff" to Compare Two JSON/YAML Files
+### 🕹️ Use `gendiff` to Compare Two JSON/YAML Files
 
 - **Stylish Format (default)**: 
   Displays the differences in a human-readable format.
@@ -74,22 +74,29 @@ gebdiff -f json first.json first.yaml
 
 <br/>
 
-# Tools and Technologies Used
+### 🛠️ Tools and Technologies Used
 
-- **Git**: ![Git](images/git.png)  
+- **Git**: <img src="images/git.png" width="25" height="25" alt="git">
   A distributed version control system for managing source code changes.
 
-- **Bash**: ![Bash](images/bash.png)  
+- **Bash**: <img src="images/bash.png" width="25" height="25" alt="git">
   A Unix shell and command language used for scripting and automation.
 
-- **Python**: ![Python](images/python3.png)  
+- **Python**: <img src="images/python3.png" width="25" height="25" alt="git">
   A high-level programming language known for its simplicity and readability.
 
-- **VSCode**: ![VSCode](images/code.png)  
+- **VSCode**: <img src="images/code.png" width="25" height="25" alt="git">
   A source-code editor with support for debugging, syntax highlighting, and more.
 
-- **Poetry**: ![Poetry]()  
+- **Poetry**: 
   A dependency management and packaging tool for Python projects.
 
-- **pytest**: ![pytest]()  
+- **pytest**:
   A framework for writing simple and scalable test cases in Python.
+
+### Additional information
+
+- **Contact**: 
+- [LinkedIn](https://www.linkedin.com/in/george-igolkin-120247231/) ![LinkedIn](https://img.shields.io/badge/LinkedIn-yourprofile-blue)
+
+© 2024
