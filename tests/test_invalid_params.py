@@ -16,8 +16,9 @@ def test_generate_diff_unsupported_file_type():
     """Test generate_diff function with unsupported file type."""
     with pytest.raises(ValueError) as excinfo:
         generate_diff(file1_bat, file2_bat)
-    
+
     assert str(excinfo.value) == 'Unsupported file type: ".bat". Supported file types: .json, .yml, .yaml'
+
 
 @pytest.mark.parametrize(
     'file1, file2, expected_error',
@@ -29,5 +30,5 @@ def test_generate_diff_unsupported_file_types(file1, file2, expected_error):
     """Test generate_diff function with unsupported file types."""
     with pytest.raises(ValueError) as excinfo:
         generate_diff(file1, file2, 'json')
-    
+
     assert str(excinfo.value) == expected_error
