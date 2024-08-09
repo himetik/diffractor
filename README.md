@@ -59,6 +59,9 @@ make run
 
 ### 🕹️ Use 'gendiff' to Compare Two JSON/YAML Files
 
+- **Flat**
+  ![Compare 2 JSON files.](/images/flat_jsons.gif)
+
 - **Stylish Format (default)**: 
   Displays the differences in a human-readable format.
 
