@@ -77,22 +77,19 @@ gebdiff -f json first.json first.yaml
 
 ### 🛠️ Tools and Technologies Used
 
-- <img src="images/git.png" width="25" height="25" alt="git"> **Git**:
-  A distributed version control system for managing source code changes.
+The project utilizes a variety of tools and technologies to enhance development and maintain code quality:
 
-- <img src="images/bash.png" width="25" height="25" alt="git"> **Bash**:
-  A Unix shell and command language used for scripting and automation.
+<img src="images/git.png" width="25" height="25" alt="Git"> **Git** is a distributed version control system used for managing source code changes and collaboration. 
 
-- <img src="images/python3.png" width="25" height="25" alt="git"> **Python**:
-  A high-level programming language known for its simplicity and readability.
+<img src="images/bash.png" width="25" height="25" alt="Bash"> **Bash** serves as a Unix shell and command language, essential for scripting and automation tasks in development environments.
 
-- <img src="images/code.png" width="25" height="25" alt="git"> **VSCode**:
-  A source-code editor with support for debugging, syntax highlighting, and more.
+<img src="images/python3.png" width="25" height="25" alt="Python"> **Python** is employed as a high-level programming language, valued for its simplicity and readability, making it a preferred choice for various programming tasks.
 
-- 🔩 **Poetry**: 
-  A dependency management and packaging tool for Python projects.
+<img src="images/code.png" width="25" height="25" alt="VSCode"> **VSCode** is the source-code editor of choice, offering robust support for debugging, syntax highlighting, and many other features that streamline coding and development.
 
-- 🧪 **pytest**:
-  A framework for writing simple and scalable test cases in Python.
+🔩 **Poetry** is used as a dependency management and packaging tool specifically designed for Python projects, facilitating easy management of project dependencies and packaging.
+
+🧪 **pytest** is the testing framework adopted for writing simple and scalable test cases in Python, ensuring code reliability and correctness through comprehensive testing.
+
 
 <br/>
