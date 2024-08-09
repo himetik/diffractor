@@ -49,7 +49,7 @@ make run
 
 <br/>
 
-### 🕹️ Use `gendiff` to Compare Two JSON/YAML Files
+### 🕹️ Use 'gendiff' to Compare Two JSON/YAML Files
 
 - **Stylish Format (default)**: 
   Displays the differences in a human-readable format.
@@ -76,27 +76,25 @@ gebdiff -f json first.json first.yaml
 
 ### 🛠️ Tools and Technologies Used
 
-- **Git**: <img src="images/git.png" width="25" height="25" alt="git">
+- <img src="images/git.png" width="25" height="25" alt="git"> **Git**:
   A distributed version control system for managing source code changes.
 
-- **Bash**: <img src="images/bash.png" width="25" height="25" alt="git">
+- <img src="images/bash.png" width="25" height="25" alt="git"> **Bash**:
   A Unix shell and command language used for scripting and automation.
 
-- **Python**: <img src="images/python3.png" width="25" height="25" alt="git">
+- <img src="images/python3.png" width="25" height="25" alt="git"> **Python**:
   A high-level programming language known for its simplicity and readability.
 
-- **VSCode**: <img src="images/code.png" width="25" height="25" alt="git">
+- <img src="images/code.png" width="25" height="25" alt="git"> **VSCode**:
   A source-code editor with support for debugging, syntax highlighting, and more.
 
-- **Poetry**: 
+- 🔩 **Poetry**: 
   A dependency management and packaging tool for Python projects.
 
-- **pytest**:
+- 🧪 **pytest**:
   A framework for writing simple and scalable test cases in Python.
 
 ### Additional information
 
-- **Contact**: 
-- [LinkedIn](https://www.linkedin.com/in/george-igolkin-120247231/) ![LinkedIn](https://img.shields.io/badge/LinkedIn-yourprofile-blue)
-
-© 2024
+- 📨 **Contact**: 
+- [LinkedIn](https://www.linkedin.com/in/george-igolkin-120247231/) ![LinkedIn](https://img.shields.io/badge/LinkedIn-himetik-green)
