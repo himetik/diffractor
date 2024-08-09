@@ -91,5 +91,23 @@ The project utilizes a variety of tools and technologies to enhance development 
 
 🧪 **pytest** is the testing framework adopted for writing simple and scalable test cases in Python, ensuring code reliability and correctness through comprehensive testing.
 
+<br/>
+
+## Project Version and Dependencies
+
+<small>- **Project version**: `0.1.0`</small><br>
+
+The project requires the following dependencies:
+
+<small>- **Python**: `^3.10`</small><br>
+<small>- **PyYAML**: `^6.0`</small><br>
+
+For development and testing, the following packages are used:
+
+<small>- **pytest**: `^7.2.0`</small><br>
+<small>- **ipython**: `^8.8.0`</small><br>
+<small>- **pytest-cov**: `^4.0.0`</small><br>
+<small>- **flake8**: `^6.0.0`</small><br>
+<small>- **isort**: `^5.11.4`</small><br>
 
 <br/>

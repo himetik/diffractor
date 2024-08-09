@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = ""
+description = "A CLI application for comparing JSON/YAML files with various output formats."
 authors = ["himetik <solidpostbox@gmail.com>"]
 readme = "README.md"
 packages = [{include = "gendiff"}]
